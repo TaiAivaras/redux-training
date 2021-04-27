@@ -5,7 +5,7 @@ import {fetchCount} from "./counterAPI";
 function* apiIncrement() {
     try {
         const {result} = yield race({
-            result: call(fetchCount, 2, 4000),
+            result: call(fetchCount, 2, 2000),
             timeout: delay(3000),
         })
 
